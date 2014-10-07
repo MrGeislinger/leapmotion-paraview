@@ -8,52 +8,49 @@ ParaView (open-source data visualization application) with Leap Motion controlle
 
 
 ###Overview:
-> Interacting with 3D data with a mouse is usally cumbersome and unnatural.  
-> Paraview, an open source data analysis and visualization application, allows   
-> for both programmatic interactions and mouse and keyboard interactions.   
-> However, mouse interactivity with 3D objects and data sets can be difficult to  
-> navigate.    
->  
->  
-> The limitation that one must interactive with 3D objects via a 2D interface   
-> makes it difficult to view the data we wish. This is where a touchless, 3D  
-> controller is useful. Intead of relying on the interpretation of projecting  
-> the mouse onto the data set, we can interact in 3D. Allowing for one to 
-> to interact with the same dimensionality as the data.  
->  
-> We have programmed the a Leap Motion Controller (by the company 
-> [Leap Motion](https://www.leapmotion.com/)) to take inputs by a user's 
-> hand(s) that are interpreted into interaction of the data. Specifically,
-> there are 4 different interactions that the user can do via the Leap Motion
-> controller: move the data, take a slice of the data, rotate the camera 
-> focused on the datam and zoom in or out with the camera. 
+ Interacting with 3D data with a mouse is usally cumbersome and unnatural.  
+ Paraview, an open source data analysis and visualization application, allows   
+ for both programmatic interactions and mouse and keyboard interactions.   
+ However, mouse interactivity with 3D objects and data sets can be difficult to  
+ navigate.    
+  
+ The limitation that one must interactive with 3D objects via a 2D interface   
+ makes it difficult to view the data we wish. This is where a touchless, 3D  
+ controller is useful. Intead of relying on the interpretation of projecting  
+ the mouse onto the data set, we can interact in 3D. Allowing for one to 
+ interact with the same dimensionality as the data.  
+  
+ We have programmed the a Leap Motion Controller (by the company 
+ [Leap Motion](https://www.leapmotion.com/)) to take inputs by a user's 
+ hand(s) that are interpreted into interaction of the data. Specifically,
+ there are 4 different interactions that the user can do via the Leap Motion
+ controller: move the data, take a slice of the data, rotate the camera 
+ focused on the datam and zoom in or out with the camera. 
 
-> There is also a
-> script where we allow slicing, zooming and rotating on the same data set.
-> These actions are called when in the view of the Leap Motion Controller
-> there is one hand present, two hands present where each has at least two
-> fingers extended and two hands present but one is a closed fist. There is
-> also an "empty" action when one or two hands are closed where the 
-> controller won't interpret anything to modify the view of the data. Note 
-> that none of these actually change the data loaded, only the view or 
-> present new data ontop of the data already loaded.
-> 
-
+ There is also a script where we allow slicing, zooming and rotating on the 
+ same data set. These actions are called when in the view of the Leap Motion 
+ Controller there is one hand present, two hands present where each has at 
+ least two fingers extended and two hands present but one is a closed fist. 
+ There is also an "empty" action when one or two hands are closed where the 
+ controller won't interpret anything to modify the view of the data. Note 
+ that none of these actually change the data loaded, only the view or 
+ present new data ontop of the data already loaded.
 
 
 =================================================================
 
 ###Source Code 	
-- [test_move.py](code/test_move.py)
-- [test_rotate.py](code/test_rotate.py)
-- [test_slice.py](code/test_slice.py)
-- [test_zoom.py](code/test_zoom.py)
-- [test_total.py](code/test_total.py)
+- [test_move.py](Code/test_move.py)
+- [test_rotate.py](Code/test_rotate.py)
+- [test_slice.py](Code/test_slice.py)
+- [test_zoom.py](Code/test_zoom.py)
+- [test_total.py](Code/test_total.py)
 
 =================================================================
-###Paper
-- [Interface with 3D Data by Touchless Control via a Leap Motion Controller](papers/paper.pdf)
-- [Presentation](papers/presentation.pdf)
+###Papers Regarding Motivation for Project
+From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
+- [Interface with 3D Data by Touchless Control via a Leap Motion Controller](Papers/paper.pdf)
+- [Presentation](Papers/presentation.pdf)
 
 
 =================================================================
