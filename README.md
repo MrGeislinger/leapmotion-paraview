@@ -109,6 +109,7 @@ From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
 ======================
 
 ####Slicing, Rotating, Zooming Data: `test_total.py`
+[![Demo Video](http://img.youtube.com/vi/xEZIb0y29ME/0.jpg)](http://www.youtube.com/watch?v=xEZIb0y29ME)
 > This will allow slicing, rotating and zooming in the same window. All  
 > controls are the same as previously mentioned except that roation is   
 > activated when two hands are present but one has no fingers present and the  
