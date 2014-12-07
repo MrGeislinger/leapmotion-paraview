@@ -81,6 +81,7 @@ From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
 
 
 ####Slicing Data: `test_slice.py` 
+[![Demo Video](http://img.youtube.com/vi/hx7Rxmb-yd4/0.jpg)](http://www.youtube.com/watch?v=hx7Rxmb-yd4)
 > This will perform a slice of the data set and display it on the screen. The   
 > user's hand is sensed by the controller and interprets the hand's normal from   
 > the palm as the normal of the slicing plane. Note that the slicing plane is  
