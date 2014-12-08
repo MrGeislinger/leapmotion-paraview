@@ -91,7 +91,6 @@ From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
 
 
 ####Rotating Data: `test_rotate.py`  
-[![Demo Video](http://img.youtube.com/vi/ycmRBwf5MTw/0.jpg)](http://www.youtube.com/watch?v=ycmRBwf5MTw)
 > This will rotate the camera about the viewing axis. This is activated by  
 > placing two hands in front of the controller but one is a closed fist and the   
 > the other a hand with at least two fingers present. When the user rotates their  
@@ -100,6 +99,7 @@ From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
 ======================
 
 ####Zooming Data: `test_zoom.py`  
+[![Demo Video](http://img.youtube.com/vi/ycmRBwf5MTw/0.jpg)](http://www.youtube.com/watch?v=ycmRBwf5MTw)
 > This will zoom in on the data set. It is activated by placing two hands in the  
 > controller's view where both hands have at least two fingers present. When the  
 > user moves his or her hands away from each other, the view will zoom into the  
