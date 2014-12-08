@@ -72,6 +72,7 @@ From UCSC's CMPS 261 (Dec. 2013) taught by Alex Pang
 ======================  
 
 ####Moving Data: `test_move.py`
+[![Demo Video](http://img.youtube.com/vi/wIHE6iW4VYc/0.jpg)](http://www.youtube.com/watch?v=wIHE6iW4VYc)
 > This will move the data set, interpreting the hand's position as the position of  
 > the data in the view. This position is scaled where the origin is located just   
 > above the controller. Note one hand must be used, but there is no requirement as   
