@@ -28,7 +28,7 @@ touchless interaction. Originally a graduate class project
  [Leap Motion](https://www.leapmotion.com/)) to take inputs by a user's 
  hand(s) that are interpreted into interaction of the data. Specifically,
  there are 4 different interactions that the user can do via the Leap Motion
- controller: move the data, take a slice of the data, rotate the camera 
+ controller: move the view on the data, take a slice of the data, rotate the camera 
  focused on the datam and zoom in or out with the camera. 
 
  There is also a script where we allow slicing, zooming and rotating on the 
