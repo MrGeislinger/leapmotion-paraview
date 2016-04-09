@@ -1,5 +1,5 @@
 
-from paraview.simple import *
+from ParaView.simple import *
 
 import sys, time
 # Path to Leap Motion Python Library
@@ -49,16 +49,16 @@ class SampleListener(Leap.Listener):
         x,y,z = (0,1,2)
         normal = frame.hands[0].palm_normal
         position = frame.hands[0].stabilized_palm_position
-
-        print "Normal:", normal[0] , normal[1], normal[2]
-
+        
+        print "Normal:", normal[0] , normal[1], normal[2] 
+        
         # ParaView Manipulation: move camera so it appears data is being moved by hand
-        camera.SetFocalPoint( -position[x]/50., -position[y]/100., -position[z]/10.)
-
+        camera.SetFocalPoint( -position[x]/50., -position[y]/100., -position[z]/10.) 
+        
         # Render the new camera position
         # Note that could be rendered after checking for hand to retain position after hand removal
         Render()
-
+        
         print "hands: %d, fingers: %d, tools: %d, gestures: %d" % (
               len(frame.hands), len(frame.fingers), len(frame.tools), len(frame.gestures()))
 
@@ -147,7 +147,7 @@ def main():
 
     while True:
         time.sleep(1.0)
-
+    
     # Remove the sample listener when done
     controller.remove_listener(listener)
 
