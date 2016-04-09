@@ -1,5 +1,5 @@
 
-from ParaView.simple import *
+from paraview.simple import *
 
 import sys, time
 # Path to Leap Motion Python Library
@@ -43,14 +43,14 @@ class SampleListener(Leap.Listener):
     def on_frame(self, controller):
         # Get the most recent frame and report some basic information
         frame = controller.frame()
-        
+
         # Check that there are 2 and only hands and that each have at least 2 fingers shown
         # This allows user to close hands to stop scaling. Therefore user has ability to zoom further
         if len(frame.hands) == 2 and len(frame.hands[0].fingers) >= 2 and len(frame.hands[1].fingers) >= 2:
             # Zoom based on the scaling from frames
             cam.Zoom(frame.scale_factor(controller.frame(2)))
         Render()
-        
+
         #Data recording
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d, tools: %d, gestures: %d" % (
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers), len(frame.tools), len(frame.gestures()))
@@ -94,13 +94,13 @@ def main():
     # Create a sample listener and controller
     listener = SampleListener()
     controller = Leap.Controller()
-    
+
     # Have the sample listener receive events from the controller
     controller.add_listener(listener)
 
     while True:
         time.sleep(1.0)
-    
+
     # Keep this process running until Enter is pressed
     print "Press Enter to quit..."
     sys.stdin.readline()

@@ -1,5 +1,5 @@
 
-from ParaView.simple import *
+from paraview.simple import *
 
 import sys, time
 # Path to Leap Motion Python Library
@@ -16,7 +16,7 @@ c = Cone(Radius=1)
 
 # Show just the slice for demonstrative purposes
 sl = Slice(c)
-Show(sl) 
+Show(sl)
 
 
 class SampleListener(Leap.Listener):
@@ -50,7 +50,7 @@ class SampleListener(Leap.Listener):
             # ParaView manipulation: adjust slice's normal to that of the first hand in the frame
             sl.SliceType.Normal = [ frame.hands[0].palm_normal[0] , frame.hands[0].palm_normal[1], frame.hands[0].palm_normal[2] ]
             Render()
-        
+
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d, tools: %d, gestures: %d" % (
               frame.id, frame.timestamp, len(frame.hands), len(frame.fingers), len(frame.tools), len(frame.gestures()))
 
@@ -149,7 +149,7 @@ def main():
     while True:
         time.sleep(1.0)
 #     print 1
-    
+
     # Keep this process running until Enter is pressed
     print "Press Enter to quit..."
     sys.stdin.readline()
