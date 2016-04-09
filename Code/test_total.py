@@ -1,5 +1,5 @@
 
-from ParaView.simple import *
+from paraview.simple import *
 
 import sys, time
 # Path to Leap Motion Python Library
@@ -30,7 +30,7 @@ x,y,z = (0,1,2)
 # # Turn slicing on/off
 # def sliceRender(sliceOn):
 #     # Already on (True)
-#     if sliceOn: 
+#     if sliceOn:
 #         return False
 #     else:
 #         return True
@@ -39,15 +39,15 @@ x,y,z = (0,1,2)
 # def slice(frame,oldNormal,on):
 #     if on:
 #         # ParaView slice normal
-#         normal = [ 
-#             frame.hands[0].palm_normal[x], 
+#         normal = [
+#             frame.hands[0].palm_normal[x],
 #             frame.hands[0].palm_normal[y],
-#             frame.hands[0].palm_normal[z] 
+#             frame.hands[0].palm_normal[z]
 #             ]
 #         return normal
 #     else:
 #         return oldNormal
-         
+
 
 class SampleListener(Leap.Listener):
 
@@ -73,14 +73,14 @@ class SampleListener(Leap.Listener):
     def on_frame(self, controller):
         # Get the most recent frame and report some basic information
         frame = controller.frame()
-        
+
         # ParaView parameters
-        normal1 = [ 
-            frame.hands[0].palm_normal[x], 
-            frame.hands[0].palm_normal[y], 
-            frame.hands[0].palm_normal[z] 
+        normal1 = [
+            frame.hands[0].palm_normal[x],
+            frame.hands[0].palm_normal[y],
+            frame.hands[0].palm_normal[z]
             ]
-        
+
         # ParaView slice: if only 1 hand and not a fist
         if len(frame.hands) == 1 and len(frame.hands[0].fingers) > 0:
             sl.SliceType.Normal = normal1
@@ -96,15 +96,15 @@ class SampleListener(Leap.Listener):
                 rotHand = frame.hands[1]
                 rollAngle = rotHand.palm_normal.roll * Leap.RAD_TO_DEG
                 azimAngle = rotHand.palm_normal.yaw * Leap.RAD_TO_DEG
-                cam.SetRoll( rollAngle )                
+                cam.SetRoll( rollAngle )
             elif len(frame.hands[1].fingers) < 2 and len(frame.hands[0].fingers) > 2 :
-                rotHand = frame.hands[0] 
+                rotHand = frame.hands[0]
                 rollAngle = rotHand.palm_normal.roll * Leap.RAD_TO_DEG
                 azimAngle = rotHand.palm_normal.yaw * Leap.RAD_TO_DEG
                 cam.SetRoll( rollAngle )
             #else:
             #cam.SetRoll(0)
-        
+
         Render()
 
         print "Frame id: %d, timestamp: %d, hands: %d, fingers: %d, tools: %d, gestures: %d" % (
@@ -198,14 +198,14 @@ def main():
     # Create a sample listener and controller
     listener = SampleListener()
     controller = Leap.Controller()
-    
+
     # Have the sample listener receive events from the controller
     controller.add_listener(listener)
 
     while True:
         time.sleep(1.0)
 #     print 1
-    
+
     # Keep this process running until Enter is pressed
     print "Press Enter to quit..."
     sys.stdin.readline()
